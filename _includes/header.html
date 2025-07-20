@@ -1,9 +1,7 @@
-<nav class="nav-bar">
-  <ul class="nav-menu">
-    <li><a href="/">home</a></li>
-    <li><a href="/about.html">about me</a></li>
-    <li><a href="/projects.html">project</a></li>
-    <li><a href="/blog.html">blog</a></li>
-    <li><a href="/contact.html">contact</a></li>
-  </ul>
-</nav>
+<header class="site-header">
+  <div class="logo">
+    <a href="/">{{ site.title }}</a>
+  </div>
+  
+  {% include nav.html %}
+</header>
