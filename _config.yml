@@ -3,3 +3,16 @@ author:
   description: "Xiao Cao's Website！"
   github: "https://github.com/FranklinCao123"
   email: "xcao23@m.fudan.edu.cn"
+
+
+nav_items:
+  - name: "home"
+    url: "/"
+  - name: "about me"
+    url: "/about.html"
+  - name: "project"
+    url: "/projects.html"
+  - name: "blog"
+    url: "/blog.html"
+  - name: "contact"
+    url: "/contact.html"
