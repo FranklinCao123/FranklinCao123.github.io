@@ -55,3 +55,32 @@
   color: white;
   outline: none;
 }
+
+.site-footer {
+  background-color: #f0f0f0;
+  padding: 15px 20px;
+  text-align: center;
+  color: #666666;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  user-select: none;
+}
+
+.site-footer a {
+  color: #666666;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+  color: #333333;
+  text-decoration: underline;
+  outline: none;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
