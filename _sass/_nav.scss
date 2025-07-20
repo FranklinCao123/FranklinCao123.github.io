@@ -1,20 +1,30 @@
-/* _nav.scss */
 .nav-bar {
   background-color: #e0e0e0;
+  padding: 10px 20px;
 }
 
 .nav-menu {
   list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  text-align: right; 
+}
+
+.nav-menu li {
+  display: inline-block; 
+  margin-left: 20px;     
+}
+
+.nav-menu li:first-child {
+  margin-left: 0;
 }
 
 .nav-menu li a {
-  padding: 0.5rem 1rem;
-  display: block;
+  text-decoration: none;
   color: #333;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
   transition: background-color 0.3s;
 }
 
