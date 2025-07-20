@@ -5,6 +5,9 @@ author:
   email: "xcao23@m.fudan.edu.cn"
 
 
+sass:
+  sass_dir: _sass
+
 nav_items:
   - name: "home"
     url: "/"
