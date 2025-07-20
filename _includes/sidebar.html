@@ -1,0 +1,16 @@
+<div class="profile">
+  <img src="{{ site.baseurl }}/images/avatar.jpg" alt="{{ site.author.name }} 头像" class="avatar" />
+  <h2 class="profile-name">{{ site.author.name }}</h2>
+  <p class="profile-description">{{ site.author.description }}</p>
+  <ul class="social-links">
+    {% if site.author.github %}
+      <li><a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
+    {% endif %}
+    {% if site.author.linkedin %}
+      <li><a href="{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
+    {% endif %}
+    {% if site.author.email %}
+      <li><a href="mailto:{{ site.author.email }}" aria-label="Email">Email</a></li>
+    {% endif %}
+  </ul>
+</div>
