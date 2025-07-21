@@ -7,4 +7,4 @@ title: Home
 
 Hello! I'm **Xiao Cao**, a Master's student specializing in High Energy Physics theory.
 
-This website showcases my projects, blog posts, and contact information. Feel free to explore!
+This website showcases my projects, blog posts, and contact information. 
