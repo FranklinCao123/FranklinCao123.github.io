@@ -1,16 +1,14 @@
-<div class="profile">
-  <img src="{{ site.baseurl }}/images/avatar.jpg" alt="{{ site.author.name }} 头像" class="avatar" />
-  <h2 class="profile-name">{{ site.author.name }}</h2>
-  <p class="profile-description">{{ site.author.description }}</p>
-  <ul class="social-links">
-    {% if site.author.github %}
-      <li><a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a></li>
-    {% endif %}
-    {% if site.author.linkedin %}
-      <li><a href="{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a></li>
-    {% endif %}
-    {% if site.author.email %}
-      <li><a href="mailto:{{ site.author.email }}" aria-label="Email">Email</a></li>
-    {% endif %}
-  </ul>
-</div>
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+  <div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if page.sidebar %}
+    {% for s in page.sidebar %}
+      {% if s.image %}
+        <img src= "{{ s.image }}" alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+      {% endif %}
+      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+      {% if s.text %}{{ s.text | markdownify }}{% endif %}
+    {% endfor %}
+  {% endif %}
+  </div>
+{% endif %}

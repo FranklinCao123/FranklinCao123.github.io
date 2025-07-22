@@ -1,7 +1,21 @@
 <header class="site-header">
-  <div class="logo">
-    <a href="/">{{ site.title }}</a>
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{ '/' | relative_url }}">Xiao Cao</a>
+
+    {% if site.nav_items and site.nav_items != empty %}
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <ul class="nav-menu">
+          {% for item in site.nav_items %}
+            <li><a href="{{ item.url | relative_url }}" class="nav-item">{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
   </div>
-  
-  {% include nav.html %}
 </header>

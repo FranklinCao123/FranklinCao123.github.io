@@ -1,9 +1,42 @@
-<footer class="site-footer">
-  <div class="footer-content">
-    <p>© {{ "now" | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
-    <p>
-      Designed and developed by
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">{{ site.author.name }}</a>.
-    </p>
+<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
+
+<footer class="site-footer h-card">
+  {% comment %}
+  <data class="u-url" value="{{ '/' | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+      {%- if site.author %}
+        <ul class="contact-list">
+          {% if site.author.name -%}
+            <li class="p-name">{{ site.author.name | escape }}</li>
+          {% endif -%}
+
+           
+          {% if site.author.email -%}
+            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- endif %}
+          
+
+        </ul>
+      {%- endif %}
+      </div>
+      <div class="footer-col">
+        <p>{{ site.description | escape }}</p>
+      </div>
+    </div>
+
+    <div class="social-links">
+      {%- include social.html -%}
+    </div>
+
   </div>
+   {% endcomment %}
+
+  <div class="footer_copyright">
+  © 2025 Xiao Cao | All rights reserved
+  </div>
+
 </footer>

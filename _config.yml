@@ -1,21 +1,33 @@
+title:  "Xiao Cao's Website"
+
 author:
-  name: "Xiao Cao"
-  description: "Xiao Cao's Website！"
-  github: "https://github.com/FranklinCao123"
-  email: "xcao23@m.fudan.edu.cn"
+  name             : "Xiao Cao (曹潇)"
+  description      : "Xiao Cao's Website"
+  identity         : "M.Sc Student"
+  bio              : "Fudan University"
+  avatar           : "/assets/images/profile_new.jpg"
+  github           : "FranklinCao123"
+  email            : "xcao23@m.fudan.edu.cn"
+  location         : "Shanghai, China"
+  googlescholar    : "https://scholar.google.com/citations?user=UAT-n_IAAAAJ&hl=en"
+  orcid            : "https://orcid.org/0009-0002-4422-667X"
+
 
 
 sass:
   sass_dir: _sass
 
+
 nav_items:
-  - name: "home"
+  - name: "Home"
     url: "/"
-  - name: "about me"
+  - name: "About Me"
     url: "/about.html"
-  - name: "project"
+  - name: "Projects"
     url: "/projects.html"
-  - name: "blog"
+  - name: "Blog"
     url: "/blog.html"
-  - name: "contact"
+  - name: "Contact"
     url: "/contact.html"
+
+baseurl: ""

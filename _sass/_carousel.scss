@@ -1,0 +1,123 @@
+.home {
+  .site-header {
+    margin-bottom: 0 !important;
+  }
+
+  .carousel {
+    margin-top: 0 !important;
+  }
+
+  main {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.home h1 {
+  text-align: center;
+  font-style: italic;
+  font-family: 'Times New Roman', serif;
+  font-size: 3em;
+  margin-top: 0.5em;
+}
+
+
+.carousel {
+  position: relative;
+  width: 99.5vw;         
+  left: 50%;            
+  margin-left: -50vw;   
+  height: 50vh;         
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  user-select: none;
+}
+
+.slides img.active {
+  display: block;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0 12px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+button.prev:hover, button.next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/*link box*/
+
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  flex-wrap: wrap;  
+  padding: 0 1rem; 
+}
+
+
+.home-links a {
+  background-color: #f0f0f0;  
+  border-radius: 20px;        
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "Century Gothic", "Microsoft YaHei", sans-serif;
+}
+
+
+.home-links a h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.9rem;         
+  font-weight: 700;
+  color: inherit;
+  font-family: "Century Gothic", "Microsoft YaHei", sans-serif;
+}
+
+.home-links a p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+
+.home-links a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}

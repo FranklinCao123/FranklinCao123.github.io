@@ -1,0 +1,66 @@
+{% assign author = site.author %}
+
+<div itemscope itemtype="http://schema.org/Person" class="profile_box">
+
+  <div class="author__avatar">
+    <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}">
+  </div>
+
+<div class="author__content">
+  <h3 class="author__name">{{ author.name }}</h3>
+
+  {% if author.bio or author.identity %}
+  <div class="author__info">
+    {% if author.bio %}
+      <p class="author__bio">{{ author.bio }}</p>
+    {% endif %}
+    {% if author.identity %}
+      <p class="author__identity" style="white-space: normal; margin-bottom: 1em;">{{ author.identity }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+
+  <div class="author__urls-wrapper">
+    <ul class="author__urls social-icons">
+
+      {%comment%}
+      {% if site.description %}
+        <li><div style="white-space: normal; margin-bottom: 1em;">{{ site.description }}</div></li>
+      {% endif %}
+      {%endcomment%}
+
+      {% if author.location %}
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.location }}</li>
+      {% endif %}
+      {% if author.employer %}
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ author.employer }}</li>
+      {% endif %}
+      {% if author.uri %}
+        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+      {% endif %}
+      {% if author.email %}
+        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+      {% endif %}
+      {% if author.twitter %}
+        <li><a href="https://twitter.com/{{ author.twitter }}"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      {% endif %}
+      {% if author.github %}
+        <li><a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      {% endif %}
+      {% if author.linkedin %}
+        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+      {% endif %}
+
+      {% if author.googlescholar %}
+        <li><a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i> Google Scholar</a></li>
+      {% endif %}
+
+      {% if author.orcid %}
+        <li><a href="{{ author.orcid }}"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+      {% endif %}
+      <!-- 可以继续添加你需要的社交链接 -->
+    </ul>
+  </div>
+</div>

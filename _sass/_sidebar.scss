@@ -1,0 +1,391 @@
+#main {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+  width: 250px;
+  flex-shrink: 0;
+
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+  border-radius: 20px;                        /* 圆角 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);   /* 阴影 */
+  padding: 2rem;                              /* 内边距 */
+
+  /* 保留你原来的样式 */
+  transform: translate3d(0, 0, 0);
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  margin-bottom: 1em;
+
+  @media (min-width: 1024px) {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 0;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
+
+  h3, h4 {
+    font-size: 1.25rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+
+.sidebar__right {
+  margin-bottom: 1em;
+
+  @media (min-width: 1024px) {
+    position: relative;
+    float: right;
+    width: 230px; /* 你可以修改 */
+    margin-left: 4.16%; /* 0.5 / 12 * 100% */
+    z-index: 10;
+  }
+
+  @media (min-width: 1280px) {
+    width: 300px; /* 你可以修改 */
+  }
+}
+
+.profile_box {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.author__avatar {
+  display: table-cell;
+  vertical-align: top;
+  width: 75px;
+
+  @media (min-width: 1024px) {
+    display: block;
+    width: auto;
+    height: auto;
+  }
+
+  img {
+    max-width: 175px;
+    min-width: 75px;
+    border-radius: 50%;
+
+    @media (min-width: 1024px) {
+      padding: 5px;
+      border: 1px solid #ccc; /* 替代 $border-color */
+    }
+  }
+}
+
+.author__content {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 10px;
+  min-width: 120px;
+  line-height: 1;
+
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  @media (min-width: 1024px) {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+}
+
+.author__name {
+  margin: 0 0 3.5em 0;  // 底部增加1.5em的间距
+
+  @media (min-width: 1024px) {
+    margin-top: 10px;
+    margin-bottom: 3.5em;  // 保持和上面一致
+  }
+}
+
+.sidebar .author__name {
+
+  font-weight: 600;
+  font-size: 2.8em;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem; /* 约等于 $type-size-3 */
+  }
+}
+
+.author__info {
+  // bio 和 identity 共同的容器，可以设置它们的样式
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  p {
+    margin: 0 0 0em 0; // p标签间距统一
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    p {
+      margin-bottom: 1.2em;
+    }
+  }
+}
+
+.author__bio {
+  margin: 0;  // 去掉单独的 margin，统一由 .author__info 控制
+}
+
+.author__identity {
+  white-space: normal;
+  margin: 0;  // 也由 .author__info 控制
+}
+
+
+.author__urls-wrapper {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+
+  z-index: 10;
+  margin-left: auto;
+  cursor: pointer;
+
+  li:last-child a {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 1024px) {
+    display: block;
+  }
+
+  button {
+    margin-bottom: 0;
+    width: 120px;
+    padding: 0.5em;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.author__urls {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 15px;
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #ccc; /* 替代 $border-color */
+  border-radius: 4px; /* 替代 $border-radius */
+  background: #fff;
+  z-index: -1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  cursor: default;
+
+  @media (min-width: 1024px) {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: calc(50% - 10px);
+    width: 0;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: #ccc transparent;
+    z-index: 0;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    width: 0;
+    border-style: solid;
+    border-width: 0 10px 10px;
+    border-color: #fff transparent;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  li {
+    white-space: nowrap;
+    margin-bottom: 5px;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: inherit;
+    font-size: 0.9rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.author__urls_sm {
+  padding: 0.25em;
+  font-size: 0.9em;
+  display: block;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+
+/* page */
+.page {
+  flex: 1;
+  padding: 1em;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #333;
+
+  background-color: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+  border-radius: 20px;                        /* 圆角 */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);   /* 阴影 */
+  padding: 2rem;                              /* 内边距 */
+
+    /* 空隙 */
+  margin-left: 1rem;
+
+
+  @media (max-width: 1023px) {
+    margin-left: 0;
+    padding: 1em 1em;
+    font-size: 0.9rem;
+  }
+
+  // 标题样式
+  h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    line-height: 1;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1rem; }
+
+
+  // 段落
+  p {
+    margin-bottom: 0.4em;
+  }
+
+  // 链接
+  a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: #004999;
+      text-decoration: underline;
+    }
+  }
+
+  // 列表
+  ul, ol {
+    margin: 1em 0 1em 1.5em;
+  }
+
+  // 图片居中
+  img {
+    max-width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
+
+  // 代码块
+  pre, code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+
+  // 横线样式
+  hr {
+    margin-top: 0.1em;   // 上间距缩小
+    margin-bottom: 0.4em; // 下间距缩小
+    border: none;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+  }
+
+
+}
+
