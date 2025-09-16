@@ -28,10 +28,10 @@ I am currently pursuing a Master’s degree in theoretical physics (high energy 
 # 🎓 Education
 ---
 
-- 2023 – Present   **M.Sc. in Physics**, Department of Physics, Fudan University, Shanghai, China<br>
+- 2023 – Present   **M.Sc. in Physics**, Department of Physics, **Fudan University**, Shanghai, China<br>
 **GPA:** 3.84 / 4.00  **Major GPA:** 3.92 / 4.00  
 
-- 2018 – 2023      **B.Sc. in Physics**, Department of Physics, Fudan University, Shanghai, China<br>
+- 2018 – 2023      **B.Sc. in Physics**, Department of Physics, **Fudan University**, Shanghai, China<br>
 **GPA:** 3.83 / 4.00  **Rank:** 3rd / 85 
 
 <br>
