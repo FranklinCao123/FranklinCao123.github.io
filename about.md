@@ -91,6 +91,7 @@ I am currently pursuing a Master’s degree in theoretical physics (high energy 
 
 # 🏆 Honors and Awards
 ---
+- 2024-2025 **Xiaomi Special Scholarship**, Fudan University, Top **10** Master’s Student university-wide, awarded per National Scholarship criteria.
 - 2023: **Outstanding Graduate**, Fudan University  
 - 2022–2023: **First Prize** Scholarship for Outstanding Students, Fudan University  
 - 2023–2024: **Master's Excellence** Scholarship (Outstanding Level), Fudan University  
