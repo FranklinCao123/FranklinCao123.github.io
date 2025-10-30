@@ -40,7 +40,7 @@ I am currently pursuing a Master’s degree in theoretical physics (high energy 
 ---
 ## Papers
 ---
-- Ye, Yunxiao, **Xiao Cao**, Yu-Hang Wu, and Jiayin Gu. “Positivity bounds in scalar-QED EFT at one-loop level.” *arXiv preprint* arXiv:2507.06302 [hep-ph], 2025. [[2507.06302]](https://arxiv.org/abs/2507.06302)
+- Ye, Yunxiao, **Xiao Cao**, Yu-Hang Wu, and Jiayin Gu. "Positivity bounds in scalar-QED EFT at one-loop level." Journal of High Energy Physics 2025, no. 10 (2025): 1-33.(https://link.springer.com/article/10.1007/JHEP10(2025)084)
 
 ## Other Publications
 ---
