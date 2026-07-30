@@ -143,6 +143,60 @@
   }
 }
 
+.project-figure {
+  margin: 1.75rem 0 2rem;
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  }
+
+  figcaption {
+    margin-top: 0.75rem;
+    color: #6b7280;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.project-table-wrapper {
+  margin: 1.5rem 0 2rem;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.project-results-table {
+  width: 100%;
+  min-width: 680px;
+  margin: 0;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.88);
+
+  th,
+  td {
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(107, 114, 128, 0.18);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: rgba(59, 130, 246, 0.09);
+    color: #1f2937;
+    font-size: 0.9rem;
+  }
+
+  td {
+    font-size: 0.88rem;
+  }
+}
+
 @media (max-width: 760px) {
   .project-grid {
     grid-template-columns: 1fr;

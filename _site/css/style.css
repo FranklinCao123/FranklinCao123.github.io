@@ -397,5 +397,16 @@ button.next { right: 10px; }
 .project-detail__content { max-width: 800px; }
 .project-detail__content h2 { margin-top: 2rem; }
 
+.project-figure { margin: 1.75rem 0 2rem; }
+.project-figure img { display: block; width: 100%; margin: 0 auto; border-radius: 12px; background: #fff; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); }
+.project-figure figcaption { margin-top: 0.75rem; color: #6b7280; font-size: 0.88rem; line-height: 1.5; text-align: center; }
+
+.project-table-wrapper { margin: 1.5rem 0 2rem; overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); }
+
+.project-results-table { width: 100%; min-width: 680px; margin: 0; border-collapse: collapse; background: rgba(255, 255, 255, 0.88); }
+.project-results-table th, .project-results-table td { padding: 0.85rem 1rem; border: 1px solid rgba(107, 114, 128, 0.18); text-align: left; vertical-align: top; }
+.project-results-table th { background: rgba(59, 130, 246, 0.09); color: #1f2937; font-size: 0.9rem; }
+.project-results-table td { font-size: 0.88rem; }
+
 @media (max-width: 760px) { .project-grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .project-card__content { padding: 1.25rem; } }
