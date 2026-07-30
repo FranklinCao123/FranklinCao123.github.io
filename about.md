@@ -52,44 +52,34 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
 # ⚛️ Research Experience
 ---
 
-- **2026.01–2026.07: PGDFlow—Generative Optimization via Flow Matching**  
-  Proposed PGDFlow, a generative optimization framework based on Conditional Flow Matching that learns distributions over optimized solutions. The framework transforms backpropagation-based iterative gradient search into a forward generation process that requires no backpropagation during inference. Systematically evaluated PGDFlow on adversarial attacks, black-box optimization, and Ising model optimization, achieving a 92.53% attack success rate with a 3.6× speedup over PGD-3, 96.9% relative performance with a 2× speedup over online gradient estimation, and an energy error of 0.004 with a 3.6× speedup over conventional gradient-based methods.
+- **2026.01–2026.07: PGDFlow—Generative Optimization via Flow Matching**
+  - Proposed PGDFlow, a generative optimization framework based on Conditional Flow Matching that learns distributions over optimized solutions and replaces iterative gradient search with backpropagation-free forward generation during inference.
+  - Evaluated PGDFlow on adversarial attacks (92.53% success rate; 3.6× speedup over PGD-3), black-box optimization (96.9% relative performance; 2× speedup over online gradient estimation), and Ising model optimization (0.004 energy error; 3.6× speedup over conventional gradient-based methods).
 
-- **2026.04–2026.06: Quantization and Inference Optimization for Learned Image Compression**  
-  Conducted research at China Telecom Shanghai Research Institute on the edge deployment of learned image compression models. Investigated post-training quantization and fixed-point inference strategies across FP16, BF16, INT8, and INT12 numerical formats, and developed evaluation pipelines to systematically benchmark the effects of quantization on encoder, decoder, and attention modules. Demonstrated that INT12 fixed-point activations provide a theoretical storage reduction of 62.5% compared with FP32 representations.
+- **2026.04–2026.06: Quantization and Inference Optimization for Learned Image Compression**
+  - Conducted research at China Telecom Shanghai Research Institute on the edge deployment of learned image compression models, focusing on post-training quantization and fixed-point inference across FP16, BF16, INT8, and INT12 formats.
+  - Developed evaluation pipelines to benchmark quantization effects on encoder, decoder, and attention modules, demonstrating that INT12 fixed-point activations provide a theoretical storage reduction of 62.5% compared with FP32 representations.
 
-- **2024.03–2024.11: Physics-Informed Deep Learning for Scientific Parameter Inference**  
-  Developed a Simulation-Based Inference framework with a Lorentz-equivariant Geometric Algebra Transformer backbone for parameter inference in semileptonic top-quark decay processes. Learned posterior distributions from large-scale Monte Carlo simulations through neural density estimation and leveraged symmetry-aware representations to improve the inference of four Wilson coefficients, producing more accurate posterior estimates and tighter credible intervals than conventional inference approaches.
+- **2024.03–2024.11: Physics-Informed Deep Learning for Scientific Parameter Inference**
+  - Developed a Simulation-Based Inference framework with a Lorentz-equivariant Geometric Algebra Transformer backbone to infer physical parameters in semileptonic top-quark decay processes from large-scale Monte Carlo simulations.
+  - Leveraged neural density estimation and symmetry-aware representations to improve the inference of four Wilson coefficients, producing more accurate posterior estimates and tighter credible intervals than conventional approaches.
 
-- **2021.09–2022.03: Electromagnetic Simulation and Optimization of a Ferrite Microwave Circulator**  
-  Developed a three-dimensional finite-element model of a ferrite microwave circulator using the COMSOL RF Module and solved the frequency-domain Maxwell equations to simulate electromagnetic-wave propagation. Implemented an anisotropic permeability tensor to investigate how gyromagnetic effects under an external bias field produce nonreciprocal transmission. Performed parametric sweeps and analyzed electric-field distributions and time-averaged power flow to optimize the device geometry using S-parameters, achieving an operating frequency range of 8.8–9.5 GHz and a minimum reflection coefficient of S₁₁ = −43.04 dB.
+- **2021.09–2022.03: Electromagnetic Simulation and Optimization of a Ferrite Microwave Circulator**
+  - Developed a three-dimensional finite-element model using the COMSOL RF Module and implemented an anisotropic permeability tensor to study nonreciprocal electromagnetic transmission under an external bias field.
+  - Performed parametric sweeps and analyzed electric-field distributions, power flow, and S-parameters to optimize the device geometry, achieving an operating range of 8.8–9.5 GHz and a minimum reflection coefficient of S₁₁ = −43.04 dB.
 
   <br>
 
-# 💻 Skills
+# 🛠️ Skills
 ---
 
-## Languages
----
-- English (IELTS Overall Band **7.0**; CET-4: **584**; CET-6: **543**)  
-- Mandarin Chinese (native)
+- **Machine Learning and Deep Learning:** Proficient in PyTorch; familiar with Transformer architectures, diffusion models, and flow matching; experienced in model training, optimization, and inference acceleration.
 
-## Theoretical Knowledge
----
-- Solid foundation in quantum field theory (QFT) and the Standard Model  
-- Knowledgeable in effective field theory, group theory, and cosmology  
-- Familiar with quantum information theory and computational physics methods
+- **Programming and Development Tools:** Proficient in Python, with foundational knowledge of Java, C, and C++; familiar with Linux development environments, Git, and deep-learning engineering workflows.
 
-## Programming
----
-- Proficient in **Python** (including machine learning and deep learning with **PyTorch**, neural networks, CNNs, Transformer models)  
-- Skilled in **Mathematica** (including FeynCalc package)
-- Experienced in **Web development**: HTML, CSS, JavaScript
+- **Scientific Background:** Statistical physics and thermodynamics, molecular biophysics, quantum mechanics, quantum chemistry, and physical chemistry.
 
-## Simulation Tools
----
-- Experienced with **MadGraph** for SM and SMEFT event generation  
-- Familiar with LHE event analysis, parton shower, and detector simulation pipelines
+- **English Proficiency:** IELTS Overall Band 7.0; CET-4: 584; CET-6: 543.
 
 <br>
 
