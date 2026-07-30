@@ -1,0 +1,38 @@
+---
+layout: base
+---
+
+<article class="project-detail">
+  <a class="project-detail__back" href="{{ '/projects/' | relative_url }}">
+    ← Back to projects
+  </a>
+
+  <header class="project-detail__header">
+    <p class="project-detail__period">{{ page.period }}</p>
+    <h1>{{ page.title }}</h1>
+
+    {% if page.summary %}
+      <p class="project-detail__summary">{{ page.summary }}</p>
+    {% endif %}
+
+    {% if page.tags %}
+      <ul class="project-tags" aria-label="Project topics">
+        {% for tag in page.tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </header>
+
+  {% if page.image %}
+    <img
+      class="project-detail__image"
+      src="{{ page.image | relative_url }}"
+      alt="{{ page.title | escape }}"
+    >
+  {% endif %}
+
+  <div class="project-detail__content">
+    {{ content }}
+  </div>
+</article>

@@ -18,6 +18,18 @@ author:
 sass:
   sass_dir: _sass
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
 
 nav_items:
   - name: "Home"
@@ -25,7 +37,7 @@ nav_items:
   - name: "About Me"
     url: "/about.html"
   - name: "Projects"
-    url: "/projects.html"
+    url: "/projects/"
   - name: "Blog"
     url: "/blog.html"
   - name: "Contact"
