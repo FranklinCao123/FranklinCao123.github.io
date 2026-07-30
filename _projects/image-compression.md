@@ -9,8 +9,18 @@ tags:
   - Model Quantization
   - Image Compression
   - Edge AI
+status: "Completed"
 ---
 
 ## Overview
 
-Detailed project description coming soon.
+This project was conducted at China Telecom Shanghai Research Institute and focused on deploying learned image compression models on edge devices. The work investigated how reduced-precision numerical formats can lower memory and inference costs while preserving the functionality of complex compression architectures.
+
+## Key Work
+
+- Studied post-training quantization and fixed-point inference strategies across FP16, BF16, INT8, and INT12 numerical formats.
+- Developed evaluation pipelines to systematically benchmark the effects of quantization on encoder, decoder, and attention modules.
+
+## Highlight
+
+INT12 fixed-point activations provide a theoretical storage reduction of **62.5%** compared with FP32 representations, demonstrating their potential for memory-efficient edge inference.

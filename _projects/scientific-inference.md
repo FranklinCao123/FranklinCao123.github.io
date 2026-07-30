@@ -9,8 +9,18 @@ tags:
   - Simulation-Based Inference
   - Geometric Deep Learning
   - Particle Physics
+status: "Completed"
 ---
 
 ## Overview
 
-Detailed project description coming soon.
+This project explored physics-informed deep learning for scientific parameter estimation in semileptonic top-quark decay processes. A Simulation-Based Inference framework was developed to learn posterior distributions directly from large-scale Monte Carlo simulations.
+
+## Key Work
+
+- Integrated a Lorentz-equivariant Geometric Algebra Transformer (L-GATr) with neural density estimation to construct symmetry-aware posterior models.
+- Applied the framework to infer four Effective Field Theory Wilson coefficients from simulated collider events.
+
+## Highlight
+
+By incorporating Lorentz symmetry into the learned representation, the framework produced more accurate posterior estimates and tighter credible intervals than conventional inference approaches.
