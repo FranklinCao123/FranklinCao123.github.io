@@ -77,7 +77,7 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
 
 - **Programming and Development Tools:** Proficient in Python, with foundational knowledge of Java, C, and C++; familiar with Linux development environments, Git, and deep-learning engineering workflows.
 
-- **Scientific Background:** Statistical physics and thermodynamics, molecular biophysics, quantum mechanics, quantum chemistry, and physical chemistry.
+- **Scientific Background:** Statistical physics and thermodynamics, quantum field theory, quantum mechanics, and particle physics.
 
 - **English Proficiency:** IELTS Overall Band 7.0; CET-4: 584; CET-6: 543.
 
