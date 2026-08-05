@@ -129,6 +129,29 @@
   font-size: 1.15rem;
 }
 
+.project-repository-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: #0066cc;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background: #004f9e;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+}
+
 .project-detail__image {
   width: 100%;
   margin-bottom: 2rem;

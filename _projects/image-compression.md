@@ -4,12 +4,13 @@ short_title: "Learned Image Compression"
 date: 2026-04-01
 period: "Apr. 2026 – Jun. 2026"
 order: 2
-summary: "Quantization and inference optimization for the edge deployment of learned image compression models."
+summary: "A precision-analysis and quantization toolkit for the edge deployment of learned image compression models."
 tags:
   - Model Quantization
   - Image Compression
   - Edge AI
 status: "Completed"
+repository: "https://github.com/FranklinCao123/neural-codec-precision"
 ---
 
 ## Overview
@@ -24,3 +25,7 @@ This project was conducted at China Telecom Shanghai Research Institute and focu
 ## Highlight
 
 INT12 fixed-point activations provide a theoretical storage reduction of **62.5%** compared with FP32 representations, demonstrating their potential for memory-efficient edge inference.
+
+## Resources
+
+- **Code:** [neural-codec-precision](https://github.com/FranklinCao123/neural-codec-precision)

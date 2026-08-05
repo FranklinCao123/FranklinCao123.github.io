@@ -22,6 +22,17 @@ layout: base
         {% endfor %}
       </ul>
     {% endif %}
+
+    {% if page.repository %}
+      <a
+        class="project-repository-link"
+        href="{{ page.repository }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View repository <span aria-hidden="true">↗</span>
+      </a>
+    {% endif %}
   </header>
 
   {% if page.image %}
