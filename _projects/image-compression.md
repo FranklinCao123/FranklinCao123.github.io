@@ -1,10 +1,10 @@
 ---
-title: "Quantization and Inference Optimization for Learned Image Compression"
-short_title: "Learned Image Compression"
+title: "Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression"
+short_title: "Neural Codec Precision"
 date: 2026-04-01
 period: "Apr. 2026 – Jun. 2026"
 order: 2
-summary: "A precision-analysis and quantization toolkit for the edge deployment of learned image compression models."
+summary: "A reproducible framework for evaluating low-precision inference, post-training quantization, and fixed-point storage in neural image codecs."
 tags:
   - Model Quantization
   - Image Compression
@@ -15,17 +15,23 @@ repository: "https://github.com/FranklinCao123/neural-codec-precision"
 
 ## Overview
 
-This project was conducted at China Telecom Shanghai Research Institute and focused on deploying learned image compression models on edge devices. The work investigated how reduced-precision numerical formats can lower memory and inference costs while preserving the functionality of complex compression architectures.
+Conducted at China Telecom Shanghai Research Institute, this project studies how reduced-precision computation affects learned image compression models intended for edge deployment. It provides a configuration-driven framework for measuring the trade-offs among compression quality, runtime, memory consumption, model size, numerical stability, and module sensitivity.
 
-## Key Work
+## Experimental Scope
 
-- Studied post-training quantization and fixed-point inference strategies across FP16, BF16, INT8, and INT12 numerical formats.
-- Developed evaluation pipelines to systematically benchmark the effects of quantization on encoder, decoder, and attention modules.
+- Evaluated pretrained CompressAI codecs, including **BMShj2018-Hyperprior**, **Cheng2020-Anchor**, and **Cheng2020-Attention**, on the Kodak image dataset.
+- Compared FP32, FP16, BF16, INT8 weight-only PTQ, calibrated INT8 weight-and-activation PTQ, and INT8/10/12/16 fixed-point activation storage.
+- Preserved entropy coding and probability-table operations in floating point where required, isolating the precision effects of neural modules while retaining valid end-to-end `compress()` and `decompress()` evaluation.
+
+## Evaluation Framework
+
+The pipeline measures rate–distortion performance (**bpp, PSNR, and MS-SSIM**), encoding and decoding latency, CUDA memory, model footprint, invalid reconstructions, and non-finite outputs. Module-level analyses compare the sensitivity of the encoder, decoder, hyperprior, GDN, residual, convolution, and attention components. An independent calibration set is used for calibrated INT8 experiments to avoid leakage from the Kodak evaluation set.
 
 ## Highlight
 
-INT12 fixed-point activations provide a theoretical storage reduction of **62.5%** compared with FP32 representations, demonstrating their potential for memory-efficient edge inference.
+The experiments identify **INT12 fixed-point activation storage** as a practical precision point, providing a theoretical storage reduction of **62.5%** relative to FP32 while enabling detailed rate–distortion and module-sensitivity analysis. The repository also includes scripts for reproducible experiment execution, result aggregation, visualization, and paper-table generation.
 
 ## Resources
 
 - **Code:** [neural-codec-precision](https://github.com/FranklinCao123/neural-codec-precision)
+- **Report:** *Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression*

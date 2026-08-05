@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Quantization and Inference Optimization for Learned Image Compression | Xiao Cao’s Website</title>
+<title>Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression | Xiao Cao’s Website</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Quantization and Inference Optimization for Learned Image Compression" />
+<meta property="og:title" content="Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression" />
 <meta name="author" content="Xiao Cao (曹潇)" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview" />
@@ -14,9 +14,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2026-04-01T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Quantization and Inference Optimization for Learned Image Compression" />
+<meta property="twitter:title" content="Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiao Cao (曹潇)"},"dateModified":"2026-04-01T00:00:00+08:00","datePublished":"2026-04-01T00:00:00+08:00","description":"Overview","headline":"Quantization and Inference Optimization for Learned Image Compression","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/image-compression/"},"url":"/projects/image-compression/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiao Cao (曹潇)"},"dateModified":"2026-04-01T00:00:00+08:00","datePublished":"2026-04-01T00:00:00+08:00","description":"Overview","headline":"Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/image-compression/"},"url":"/projects/image-compression/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/css/style.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css" /></head><body class="project"><header class="site-header">
@@ -57,10 +57,10 @@
 
   <header class="project-detail__header">
     <p class="project-detail__period">Apr. 2026 – Jun. 2026</p>
-    <h1>Quantization and Inference Optimization for Learned Image Compression</h1>
+    <h1>Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression</h1>
 
     
-      <p class="project-detail__summary">A precision-analysis and quantization toolkit for the edge deployment of learned image compression models.</p>
+      <p class="project-detail__summary">A reproducible framework for evaluating low-precision inference, post-training quantization, and fixed-point storage in neural image codecs.</p>
     
 
     
@@ -92,23 +92,29 @@
   <div class="project-detail__content">
     <h2 id="overview">Overview</h2>
 
-<p>This project was conducted at China Telecom Shanghai Research Institute and focused on deploying learned image compression models on edge devices. The work investigated how reduced-precision numerical formats can lower memory and inference costs while preserving the functionality of complex compression architectures.</p>
+<p>Conducted at China Telecom Shanghai Research Institute, this project studies how reduced-precision computation affects learned image compression models intended for edge deployment. It provides a configuration-driven framework for measuring the trade-offs among compression quality, runtime, memory consumption, model size, numerical stability, and module sensitivity.</p>
 
-<h2 id="key-work">Key Work</h2>
+<h2 id="experimental-scope">Experimental Scope</h2>
 
 <ul>
-  <li>Studied post-training quantization and fixed-point inference strategies across FP16, BF16, INT8, and INT12 numerical formats.</li>
-  <li>Developed evaluation pipelines to systematically benchmark the effects of quantization on encoder, decoder, and attention modules.</li>
+  <li>Evaluated pretrained CompressAI codecs, including <strong>BMShj2018-Hyperprior</strong>, <strong>Cheng2020-Anchor</strong>, and <strong>Cheng2020-Attention</strong>, on the Kodak image dataset.</li>
+  <li>Compared FP32, FP16, BF16, INT8 weight-only PTQ, calibrated INT8 weight-and-activation PTQ, and INT8/10/12/16 fixed-point activation storage.</li>
+  <li>Preserved entropy coding and probability-table operations in floating point where required, isolating the precision effects of neural modules while retaining valid end-to-end <code class="language-plaintext highlighter-rouge">compress()</code> and <code class="language-plaintext highlighter-rouge">decompress()</code> evaluation.</li>
 </ul>
+
+<h2 id="evaluation-framework">Evaluation Framework</h2>
+
+<p>The pipeline measures rate–distortion performance (<strong>bpp, PSNR, and MS-SSIM</strong>), encoding and decoding latency, CUDA memory, model footprint, invalid reconstructions, and non-finite outputs. Module-level analyses compare the sensitivity of the encoder, decoder, hyperprior, GDN, residual, convolution, and attention components. An independent calibration set is used for calibrated INT8 experiments to avoid leakage from the Kodak evaluation set.</p>
 
 <h2 id="highlight">Highlight</h2>
 
-<p>INT12 fixed-point activations provide a theoretical storage reduction of <strong>62.5%</strong> compared with FP32 representations, demonstrating their potential for memory-efficient edge inference.</p>
+<p>The experiments identify <strong>INT12 fixed-point activation storage</strong> as a practical precision point, providing a theoretical storage reduction of <strong>62.5%</strong> relative to FP32 while enabling detailed rate–distortion and module-sensitivity analysis. The repository also includes scripts for reproducible experiment execution, result aggregation, visualization, and paper-table generation.</p>
 
 <h2 id="resources">Resources</h2>
 
 <ul>
   <li><strong>Code:</strong> <a href="https://github.com/FranklinCao123/neural-codec-precision">neural-codec-precision</a></li>
+  <li><strong>Report:</strong> <em>Post-Training Quantization and Fixed-Point Analysis for Learned Image Compression</em></li>
 </ul>
 
   </div>

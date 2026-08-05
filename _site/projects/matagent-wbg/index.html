@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>MatAgent-WBG: An AI Agent for Scientific Research | Xiao Cao’s Website</title>
+<title>MatAgent-WBG: A Scientific Agent for Wide-Bandgap Materials Screening | Xiao Cao’s Website</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="MatAgent-WBG: An AI Agent for Scientific Research" />
+<meta property="og:title" content="MatAgent-WBG: A Scientific Agent for Wide-Bandgap Materials Screening" />
 <meta name="author" content="Xiao Cao (曹潇)" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Overview" />
@@ -14,9 +14,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2026-08-01T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="MatAgent-WBG: An AI Agent for Scientific Research" />
+<meta property="twitter:title" content="MatAgent-WBG: A Scientific Agent for Wide-Bandgap Materials Screening" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiao Cao (曹潇)"},"dateModified":"2026-08-01T00:00:00+08:00","datePublished":"2026-08-01T00:00:00+08:00","description":"Overview","headline":"MatAgent-WBG: An AI Agent for Scientific Research","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/matagent-wbg/"},"url":"/projects/matagent-wbg/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xiao Cao (曹潇)"},"dateModified":"2026-08-01T00:00:00+08:00","datePublished":"2026-08-01T00:00:00+08:00","description":"Overview","headline":"MatAgent-WBG: A Scientific Agent for Wide-Bandgap Materials Screening","mainEntityOfPage":{"@type":"WebPage","@id":"/projects/matagent-wbg/"},"url":"/projects/matagent-wbg/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/css/style.css">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons/css/academicons.min.css" /></head><body class="project"><header class="site-header">
@@ -57,10 +57,10 @@
 
   <header class="project-detail__header">
     <p class="project-detail__period">Ongoing</p>
-    <h1>MatAgent-WBG: An AI Agent for Scientific Research</h1>
+    <h1>MatAgent-WBG: A Scientific Agent for Wide-Bandgap Materials Screening</h1>
 
     
-      <p class="project-detail__summary">An agent-based project for scientific research and AI for Science workflows.</p>
+      <p class="project-detail__summary">A lightweight, auditable scientific agent for screening wide-bandgap semiconductor materials.</p>
     
 
     
@@ -68,9 +68,9 @@
         
           <li>AI Agents</li>
         
-          <li>AI for Science</li>
+          <li>Materials Informatics</li>
         
-          <li>Scientific Workflows</li>
+          <li>Scientific RAG</li>
         
       </ul>
     
@@ -92,21 +92,36 @@
   <div class="project-detail__content">
     <h2 id="overview">Overview</h2>
 
-<p>MatAgent-WBG is an ongoing AI agent project for scientific research. The project explores how agent-based systems can organize reasoning, tool use, and multi-stage workflows for domain-specific scientific tasks.</p>
+<p>MatAgent-WBG is a lightweight, tool-using scientific agent for screening wide-bandgap semiconductor materials. It combines large-language-model reasoning with validated scientific tools, Materials Project data, literature retrieval, persistent workflow state, and citation-checked reporting. The system runs through hosted services and APIs without requiring a local model, GPU, or large training dataset.</p>
 
-<h2 id="current-focus">Current Focus</h2>
+<h2 id="workflow">Workflow</h2>
+
+<ol>
+  <li><strong>Parse requirements.</strong> Natural-language requests are converted into strict Pydantic objects and checked before execution.</li>
+  <li><strong>Plan and execute tools.</strong> LangGraph routes allow-listed tool calls, queries Materials Project, and applies deterministic scientific filters and ranking.</li>
+  <li><strong>Retrieve evidence.</strong> Semantic Scholar abstracts are embedded with hosted BGE-M3 and retrieved through a Supabase pgvector knowledge base.</li>
+  <li><strong>Generate a grounded report.</strong> Candidate materials and DOI citations are validated before the final report is produced.</li>
+</ol>
+
+<h2 id="design-and-reliability">Design and Reliability</h2>
 
 <ul>
-  <li>Developing a modular agent workflow for scientific problem solving.</li>
-  <li>Connecting model reasoning with domain knowledge and research tools.</li>
-  <li>Improving the reproducibility and efficiency of multi-step scientific workflows.</li>
+  <li>Uses persistent LangGraph state, execution traces, and SQLite checkpoints to make multi-stage runs inspectable and reproducible.</li>
+  <li>Separates responsibilities: the LLM handles language, tool selection, and communication, while scientific filtering and ranking remain deterministic code.</li>
+  <li>Includes an offline fallback, a lightweight FastAPI interface, network-free tests, and retrieval evaluation metrics.</li>
+  <li>Rejects unknown candidates, invalid tool arguments, unsupported API values, and unverified DOI references rather than silently fabricating evidence.</li>
 </ul>
+
+<h2 id="scientific-scope">Scientific Scope</h2>
+
+<p>The agent is designed as an auditable screening assistant rather than a replacement for materials validation. Missing properties such as thermal conductivity or breakdown field are reported explicitly and are not fabricated or used for silent ranking. Retrieved abstracts improve traceability but do not replace full-paper review, and device-level factors such as defects, doping, contacts, cost, and manufacturability remain outside the current screening stage.</p>
 
 <h2 id="resources">Resources</h2>
 
 <ul>
   <li><strong>Code:</strong> <a href="https://github.com/FranklinCao123/MatAgent-WBG">MatAgent-WBG</a></li>
-  <li><strong>Status:</strong> Active development; a more detailed project description will be added as the project evolves.</li>
+  <li><strong>Interface:</strong> Command-line workflow and a lightweight local FastAPI web interface.</li>
+  <li><strong>Status:</strong> Active development.</li>
 </ul>
 
   </div>
