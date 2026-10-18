@@ -3,7 +3,7 @@ title: "MatAgent-WBG: A Scientific Agent for Wide-Bandgap Materials Screening"
 short_title: "MatAgent-WBG"
 date: 2026-08-01
 period: "Ongoing"
-order: 3
+order: 5
 summary: "A lightweight, auditable scientific agent for screening wide-bandgap semiconductor materials."
 tags:
   - AI Agents

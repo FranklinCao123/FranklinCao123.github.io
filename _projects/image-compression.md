@@ -3,7 +3,7 @@ title: "Post-Training Quantization and Fixed-Point Analysis for Learned Image Co
 short_title: "Neural Codec Precision"
 date: 2026-04-01
 period: "Apr. 2026 – Jun. 2026"
-order: 2
+order: 6
 summary: "A reproducible framework for evaluating low-precision inference, post-training quantization, and fixed-point storage in neural image codecs."
 tags:
   - Model Quantization

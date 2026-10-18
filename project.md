@@ -9,8 +9,8 @@ permalink: /projects/
     <p class="projects-kicker">Selected Work</p>
     <h1>Projects</h1>
     <p>
-      Selected projects at the intersection of artificial intelligence and
-      scientific research.
+      Selected projects in artificial intelligence, theoretical physics, and
+      scientific computing.
     </p>
   </header>
 
