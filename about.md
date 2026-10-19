@@ -43,7 +43,7 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
 
 ## Manuscripts in Preparation
 ---
-- **Xiao Cao**, Zening Xuan, Hao Xiong, Liangliang Shi, and Junchi Yan.  
+- **Xiao Cao**, Zening Xuan, Liangliang Shi, and Hao Xiong.  
   “PGDFlow: From Backpropagation to Forward Generation via Flow Matching.”  
   *Manuscript in preparation.* · [Project]({{ '/projects/pgdflow/' | relative_url }})
 
@@ -56,9 +56,9 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
   - Studied how one-loop corrections affect positivity bounds in scalar-QED effective field theory, using photon–scalar and photon–photon scattering amplitudes and dispersion relations.
   - Examined the roles of gauge invariance, infrared regularization, and renormalization-group evolution, with checks in heavy-scalar UV models. [Paper](https://doi.org/10.1007/JHEP10(2025)084)
 
-- **2026.01–2026.07: PGDFlow—Generative Optimization via Flow Matching** · [Project]({{ '/projects/pgdflow/' | relative_url }})
-  - Proposed PGDFlow, a generative optimization framework based on Conditional Flow Matching that learns distributions over optimized solutions and replaces iterative gradient search with backpropagation-free forward generation during inference.
-  - Evaluated PGDFlow on adversarial attacks (92.53% success rate; 3.6× speedup over PGD-3), black-box optimization (96.9% relative performance; 1.75× speedup over online gradient estimation), and 2D XY model optimization (0.004 energy error; 3.6× speedup over gradient flow).
+- **PGDFlow—Generative Optimization via Flow Matching** · *Ongoing Research* · [Project]({{ '/projects/pgdflow/' | relative_url }})
+  - Developing a conditional flow-matching approach that learns distributions of optimizer solutions and investigates forward generation as an alternative to per-instance iterative search.
+  - Studying shared solution structure, mode conditioning, and input-dependent noise priors, with ongoing evaluation on adversarial examples, black-box optimization, and the 2D XY model.
 
 - **Machine Learning for Top-Quark EFT** · *Ongoing Research* · [Project]({{ '/projects/scientific-inference/' | relative_url }})
   - Exploring machine-learning-assisted inference of SMEFT Wilson coefficients in top-quark pair production and semileptonic decay at future electron–positron colliders.

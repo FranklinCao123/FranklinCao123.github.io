@@ -50,136 +50,44 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="project-detail">
-  <a class="project-detail__back" href="/projects/">
-    ← Back to projects
-  </a>
-
-  <header class="project-detail__header">
-    <p class="project-detail__period">Jan. 2026 – Jul. 2026</p>
-    <h1>PGDFlow: From Backpropagation to Forward Generation via Flow Matching</h1>
-
-    
-      <p class="project-detail__summary">A generative optimization framework based on Conditional Flow Matching.</p>
-    
-
-    
-      <ul class="project-tags" aria-label="Project topics">
-        
-          <li>Flow Matching</li>
-        
-          <li>Generative Models</li>
-        
-          <li>Optimization</li>
-        
-      </ul>
-    
-
-    
-  </header>
-
-  
-
-  <div class="project-detail__content">
-    <h2 id="overview">Overview</h2>
-
-<p>PGDFlow is a generative optimization framework that replaces repeated gradient-based search at inference time with efficient forward generation. Instead of solving every new problem from scratch, it learns the conditional distribution of optimized solutions produced by an iterative optimizer. Once trained, PGDFlow transports samples from a simple Gaussian prior directly toward high-quality solutions in one or a few forward steps—without backpropagation during inference.</p>
-
-<p>The framework is developed around adversarial example generation and further evaluated on black-box function optimization and a two-dimensional XY model, demonstrating its potential as a general approach to AI-driven scientific optimization.</p>
-
-<h2 id="motivation">Motivation</h2>
-
-<p>Traditional optimizers such as Projected Gradient Descent (PGD) repeatedly compute gradients and update each input independently. This makes inference expensive, particularly when gradients are unavailable and must be estimated through many function evaluations. Repeated optimization is also required to obtain multiple valid solutions.</p>
-
-<p>PGDFlow starts from a different perspective: stochastic optimization runs naturally produce a distribution of successful solutions. Learning this full conditional distribution is preferable to direct regression, which tends to collapse multimodal solutions to their average. A generative model can instead reuse knowledge across related problem instances and produce diverse candidates through forward sampling.</p>
-
-<h2 id="method">Method</h2>
-
+        <article class="project-detail"><a class="project-detail__back" href="/projects/">← Back to projects</a><header class="project-detail__header"><p class="project-detail__period">Ongoing Research</p><h1>PGDFlow: From Backpropagation to Forward Generation via Flow Matching</h1><p class="project-detail__summary">Investigating optimization as conditional generation by learning distributions of solutions from iterative optimizers.</p><ul class="project-tags"><li>Flow Matching</li><li>Generative Models</li><li>Optimization</li></ul></header><div class="project-detail__content"><p><em>Ongoing research · Manuscript in preparation</em></p>
+<h2>Overview</h2>
+<p>PGDFlow explores how generative models can learn from iterative optimizers and reuse that knowledge across related problem instances. Rather than running gradient-based search independently for every new input, the project investigates learning a conditional distribution of optimizer solutions and generating candidates through forward computation.</p>
+<p>The research starts with adversarial example generation and also examines black-box function optimization and energy minimization in a two-dimensional XY model.</p>
+<h2>Motivation</h2>
+<p>Projected Gradient Descent (PGD) repeatedly computes gradients and projects updates onto a feasible region. Random restarts can lead to different valid solutions for the same input, motivating a distributional view of optimization.</p>
+<p>An important research question is which aspects of these solutions can be shared across inputs and learned in advance. The project studies shared directions, solution modes, and instance-specific variation, rather than treating every optimizer output as an isolated target. This perspective motivates conditional generation as an alternative to predicting an averaged solution through regression.</p>
+<h2>Method Overview</h2>
 <figure class="project-figure">
-  <img src="/assets/images/projects/pgdflow/pgdflow-overview.png" alt="Comparison between iterative PGD and the three-stage PGDFlow pipeline" />
+  <img
+    src="/assets/images/projects/pgdflow/pgdflow-overview.png"
+    alt="Conceptual comparison of iterative PGD and conditional generation, followed by solution construction, flow matching training, and forward sampling"
+  >
   <figcaption>
-    PGDFlow converts iterative optimization into conditional generation through solution construction, flow matching training, and backpropagation-free sampling.
+    PGDFlow investigates a transition from iterative optimization to conditional generation: constructing optimizer solutions, learning a flow, and generating candidates through forward sampling.
   </figcaption>
 </figure>
 
-<p>The PGDFlow pipeline contains three stages:</p>
-
+<p>The framework is organized around three stages:</p>
 <ol>
-  <li><strong>Solution construction.</strong> PGD is run offline with random restarts to collect multiple optimized solutions for each initial input.</li>
-  <li><strong>Conditional flow matching.</strong> A conditional vector field learns to transport Gaussian noise to the solution distribution. The model supports standard multi-step flow matching and a MeanFlow variant for one-step generation.</li>
-  <li><strong>Forward generation.</strong> At inference time, new solutions are generated through one or a few forward evaluations and projected onto the feasible region when required.</li>
+<li><strong>Solution construction.</strong> Use iterative optimization to obtain example solutions for related inputs.</li>
+<li><strong>Conditional generative modeling.</strong> Learn a flow from a noise distribution to candidate solutions, conditioned on the original input.</li>
+<li><strong>Forward generation.</strong> Generate candidates with forward evaluations and apply the relevant feasibility constraints.</li>
 </ol>
-
-<p>Three complementary strategies improve solution quality:</p>
-
+<p>Current work also investigates conditioning on solution modes, such as the landing class in adversarial example generation, and learning input-dependent noise priors. These directions explore how solution structure and sampling choices relate to optimization quality and diversity.</p>
+<p>Training can use optimizer-generated examples and task gradients. At inference, the aim is to generate candidates through forward computation without repeating the optimizer&#39;s backward iterations.</p>
+<h2>Ongoing Evaluation</h2>
+<p>The project is evaluating the approach across adversarial example generation, black-box optimization, and physics-based energy minimization. The investigation considers solution quality, computational cost, and diversity, together with the limits of transferring optimization behavior across inputs.</p>
+<h2>My Contributions</h2>
 <ul>
-  <li><strong>Optimization-guided fine-tuning</strong> incorporates the task objective directly into model refinement.</li>
-  <li><strong>Noise modulation</strong> adapts the prior distribution to each input while keeping the learned flow fixed.</li>
-  <li><strong>Multi-noise selection</strong> generates several candidates and selects the one with the best objective value.</li>
+<li>Developing the formulation of optimization as conditional generative modeling.</li>
+<li>Investigating the structure of optimizer solutions and mode-conditioned generation.</li>
+<li>Implementing and evaluating flow-based models and approaches to controlling the sampling distribution.</li>
 </ul>
-
-<h2 id="key-results">Key Results</h2>
-
-<figure class="project-figure">
-  <img src="/assets/images/projects/pgdflow/pgdflow-results.png" alt="Effects of noise modulation and flow steps on the adversarial optimization objective" />
-  <figcaption>
-    Noise modulation shifts generated candidates toward stronger objective values, while additional flow steps progressively improve optimization quality.
-  </figcaption>
-</figure>
-
-<div class="project-table-wrapper">
-  <table class="project-results-table">
-    <thead>
-      <tr>
-        <th>Task</th>
-        <th>PGDFlow result</th>
-        <th>Reference</th>
-        <th>Efficiency</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>CIFAR-10 adversarial attack (ℓ<sub>2</sub>)</td>
-        <td>92.53% ASR, 70.0 μs</td>
-        <td>PGD-3: 92.01%, 254.3 μs</td>
-        <td>3.6× faster</td>
-      </tr>
-      <tr>
-        <td>Quadratic black-box optimization (d = 512)</td>
-        <td>0.969 relative decrease, 3.59 s</td>
-        <td>Estimated gradient: 0.962, 6.29 s</td>
-        <td>1.75× faster</td>
-      </tr>
-      <tr>
-        <td>2D XY model (64 × 64)</td>
-        <td>0.004 energy error, 9.0 ms</td>
-        <td>Gradient flow: 32.1 ms</td>
-        <td>3.6× faster</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<p>Across MNIST, Fashion-MNIST, CIFAR-10, and SVHN, the one-step MeanFlow variant consistently outperformed single-step gradient baselines. On CIFAR-10 under the ℓ<sub>2</sub> constraint, optimization-guided fine-tuning raised the attack success rate from 71.14% to 92.53%, slightly exceeding PGD-3 while substantially reducing latency. The experiments on black-box functions and the 2D XY model further show that the approach transfers beyond adversarial attacks while preserving strong optimization quality.</p>
-
-<h2 id="my-contributions">My Contributions</h2>
-
-<ul>
-  <li>Developed the PGDFlow formulation that recasts iterative optimization as conditional generative modeling.</li>
-  <li>Implemented the flow-matching and MeanFlow variants together with optimization-guided fine-tuning, noise modulation, and multi-noise selection.</li>
-  <li>Designed and conducted experiments across adversarial attacks, black-box optimization, and physics-based energy minimization, including efficiency and solution-quality analyses.</li>
-</ul>
-
-<h2 id="resources">Resources</h2>
-
-<ul>
-  <li><strong>Paper:</strong> <em>PGDFlow: From Backpropagation to Forward Generation via Flow Matching</em> — manuscript in preparation.</li>
-  <li><strong>Authors:</strong> Xiao Cao, Zening Xuan, Hao Xiong, Liangliang Shi, and Junchi Yan.</li>
-  <li><strong>Code:</strong> Coming soon.</li>
-</ul>
-
-  </div>
-</article>
+<h2>Research Status</h2>
+<p><strong>Ongoing research · Manuscript in preparation.</strong> This page presents the research motivation and general approach. Experimental results, numerical comparisons, and detailed training configurations are not included while the work is being developed.</p>
+<p><strong>Authors:</strong> Xiao Cao, Zening Xuan, Liangliang Shi, and Hao Xiong.</p>
+</div></article>
 
       </div>
     </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css">
