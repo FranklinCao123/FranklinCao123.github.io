@@ -38,14 +38,14 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
 ---
 - Yunxiao Ye, **Xiao Cao**, Yu-Hang Wu, and Jiayin Gu. [“Positivity bounds in scalar-QED EFT at one-loop level.”](https://doi.org/10.1007/JHEP10(2025)084) *Journal of High Energy Physics* **10** (2025) 084. [arXiv](https://arxiv.org/abs/2507.06302) · [Project]({{ '/projects/positivity-bounds/' | relative_url }})<br>
 
-- **Xiao Cao**, Cuiqin Bai, et al. "COMSOL Simulation of Ferrite Microwave Circulator." *College Physics*, vol. 41, no. 9, 2022, p. 63.[[link]](https://dxwl.bnu.edu.cn/CN/10.16854/j.cnki.1000-0712.220035)<br>
+- **Xiao Cao**, Cuiqin Bai, et al. "COMSOL Simulation of Ferrite Microwave Circulator." *College Physics*, vol. 41, no. 9, 2022, p. 63.[[link]](https://dxwl.bnu.edu.cn/CN/10.16854/j.cnki.1000-0712.220035) · [Project]({{ '/projects/microwave-circulator/' | relative_url }})<br>
 
 
 ## Manuscripts in Preparation
 ---
 - **Xiao Cao**, Zening Xuan, Hao Xiong, Liangliang Shi, and Junchi Yan.  
   “PGDFlow: From Backpropagation to Forward Generation via Flow Matching.”  
-  *Manuscript in preparation.* 
+  *Manuscript in preparation.* · [Project]({{ '/projects/pgdflow/' | relative_url }})
 
 <br>
 
@@ -56,7 +56,7 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
   - Studied how one-loop corrections affect positivity bounds in scalar-QED effective field theory, using photon–scalar and photon–photon scattering amplitudes and dispersion relations.
   - Examined the roles of gauge invariance, infrared regularization, and renormalization-group evolution, with checks in heavy-scalar UV models. [Paper](https://doi.org/10.1007/JHEP10(2025)084)
 
-- **2026.01–2026.07: PGDFlow—Generative Optimization via Flow Matching**
+- **2026.01–2026.07: PGDFlow—Generative Optimization via Flow Matching** · [Project]({{ '/projects/pgdflow/' | relative_url }})
   - Proposed PGDFlow, a generative optimization framework based on Conditional Flow Matching that learns distributions over optimized solutions and replaces iterative gradient search with backpropagation-free forward generation during inference.
   - Evaluated PGDFlow on adversarial attacks (92.53% success rate; 3.6× speedup over PGD-3), black-box optimization (96.9% relative performance; 1.75× speedup over online gradient estimation), and 2D XY model optimization (0.004 energy error; 3.6× speedup over gradient flow).
 
@@ -64,11 +64,11 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
   - Exploring machine-learning-assisted inference of SMEFT Wilson coefficients in top-quark pair production and semileptonic decay at future electron–positron colliders.
   - Connecting optimal observables with simulation-based inference by learning parameter-sensitive scores from simulated events, with the aim of supporting likelihood-based inference while accounting for detector effects.
 
-- **2026.04–2026.06: Quantization and Inference Optimization for Learned Image Compression**
+- **2026.04–2026.06: Quantization and Inference Optimization for Learned Image Compression** · [Project]({{ '/projects/image-compression/' | relative_url }})
   - Conducted research at China Telecom Shanghai Research Institute on the edge deployment of learned image compression models, focusing on post-training quantization and fixed-point inference across FP16, BF16, INT8, and INT12 formats.
   - Developed evaluation pipelines to benchmark quantization effects on encoder, decoder, and attention modules, demonstrating that INT12 fixed-point activations provide a theoretical storage reduction of 62.5% compared with FP32 representations.
 
-- **2021.09–2022.03: Electromagnetic Simulation and Optimization of a Ferrite Microwave Circulator**
+- **2021.09–2022.03: Electromagnetic Simulation and Optimization of a Ferrite Microwave Circulator** · [Project]({{ '/projects/microwave-circulator/' | relative_url }})
   - Developed a three-dimensional finite-element model using the COMSOL RF Module and implemented an anisotropic permeability tensor to study nonreciprocal electromagnetic transmission under an external bias field.
   - Performed parametric sweeps and analyzed electric-field distributions, power flow, and S-parameters to optimize the device geometry, achieving an operating range of 8.8–9.5 GHz and a minimum reflection coefficient of S₁₁ = −43.04 dB.
 
