@@ -36,7 +36,7 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
 ---
 ## Published Papers
 ---
-- Ye, Yunxiao, **Xiao Cao**, Yu-Hang Wu, and Jiayin Gu. "Positivity bounds in scalar-QED EFT at one-loop level." Journal of High Energy Physics 2025, no. 10 (2025): 1-33.(https://link.springer.com/article/10.1007/JHEP10(2025)084)<br>
+- Yunxiao Ye, **Xiao Cao**, Yu-Hang Wu, and Jiayin Gu. [“Positivity bounds in scalar-QED EFT at one-loop level.”](https://doi.org/10.1007/JHEP10(2025)084) *Journal of High Energy Physics* **10** (2025) 084. [arXiv](https://arxiv.org/abs/2507.06302) · [Project]({{ '/projects/positivity-bounds/' | relative_url }})<br>
 
 - **Xiao Cao**, Cuiqin Bai, et al. "COMSOL Simulation of Ferrite Microwave Circulator." *College Physics*, vol. 41, no. 9, 2022, p. 63.[[link]](https://dxwl.bnu.edu.cn/CN/10.16854/j.cnki.1000-0712.220035)<br>
 
@@ -52,17 +52,21 @@ I enrolled at Fudan University in 2018, initially studying Electronic Engineerin
 # ⚛️ Research Experience
 ---
 
+- **One-Loop Positivity Bounds in Scalar-QED EFT** · *Published in JHEP, Oct. 2025* · [Project]({{ '/projects/positivity-bounds/' | relative_url }})
+  - Studied how one-loop corrections affect positivity bounds in scalar-QED effective field theory, using photon–scalar and photon–photon scattering amplitudes and dispersion relations.
+  - Examined the roles of gauge invariance, infrared regularization, and renormalization-group evolution, with checks in heavy-scalar UV models. [Paper](https://doi.org/10.1007/JHEP10(2025)084)
+
 - **2026.01–2026.07: PGDFlow—Generative Optimization via Flow Matching**
   - Proposed PGDFlow, a generative optimization framework based on Conditional Flow Matching that learns distributions over optimized solutions and replaces iterative gradient search with backpropagation-free forward generation during inference.
-  - Evaluated PGDFlow on adversarial attacks (92.53% success rate; 3.6× speedup over PGD-3), black-box optimization (96.9% relative performance; 2× speedup over online gradient estimation), and Ising model optimization (0.004 energy error; 3.6× speedup over conventional gradient-based methods).
+  - Evaluated PGDFlow on adversarial attacks (92.53% success rate; 3.6× speedup over PGD-3), black-box optimization (96.9% relative performance; 1.75× speedup over online gradient estimation), and 2D XY model optimization (0.004 energy error; 3.6× speedup over gradient flow).
+
+- **Machine Learning for Top-Quark EFT** · *Ongoing Research* · [Project]({{ '/projects/scientific-inference/' | relative_url }})
+  - Exploring machine-learning-assisted inference of SMEFT Wilson coefficients in top-quark pair production and semileptonic decay at future electron–positron colliders.
+  - Connecting optimal observables with simulation-based inference by learning parameter-sensitive scores from simulated events, with the aim of supporting likelihood-based inference while accounting for detector effects.
 
 - **2026.04–2026.06: Quantization and Inference Optimization for Learned Image Compression**
   - Conducted research at China Telecom Shanghai Research Institute on the edge deployment of learned image compression models, focusing on post-training quantization and fixed-point inference across FP16, BF16, INT8, and INT12 formats.
   - Developed evaluation pipelines to benchmark quantization effects on encoder, decoder, and attention modules, demonstrating that INT12 fixed-point activations provide a theoretical storage reduction of 62.5% compared with FP32 representations.
-
-- **2024.03–2024.11: Physics-Informed Deep Learning for Scientific Parameter Inference**
-  - Developed a Simulation-Based Inference framework with a Lorentz-equivariant Geometric Algebra Transformer backbone to infer physical parameters in semileptonic top-quark decay processes from large-scale Monte Carlo simulations.
-  - Leveraged neural density estimation and symmetry-aware representations to improve the inference of four Wilson coefficients, producing more accurate posterior estimates and tighter credible intervals than conventional approaches.
 
 - **2021.09–2022.03: Electromagnetic Simulation and Optimization of a Ferrite Microwave Circulator**
   - Developed a three-dimensional finite-element model using the COMSOL RF Module and implemented an anisotropic permeability tensor to study nonreciprocal electromagnetic transmission under an external bias field.
